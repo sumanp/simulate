@@ -63,4 +63,15 @@ class World
     end
     live_neighbours
   end
+
+  def live_cells
+    cells.select { |cell| cell.alive }
+  end
+
+  def randomly_populate
+    cells.each do |cell|
+      cell.alive = [true, false].sample 
+    end
+  end
+
 end

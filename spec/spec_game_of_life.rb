@@ -1,7 +1,7 @@
 #spec for game of life
 require 'rspec'
 require 'spec_helper.rb'
-require_relative '../game_of_life.rb'
+require_relative '../world.rb'
 
 describe  'Game of life' do
   let!(:world) { World.new }
@@ -20,6 +20,8 @@ describe  'Game of life' do
       subject.should respond_to(:cell_grid)
       subject.should respond_to(:live_neighbours_around_cell)
       subject.should respond_to(:cells)
+      subject.should respond_to(:randomly_populate)
+      subject.should respond_to(:live_cells)
     end
     it 'should create valid cell grid on initalization' do
       subject.cell_grid.is_a?(Array).should be true
@@ -64,6 +66,11 @@ describe  'Game of life' do
     it 'Detects live neighbour to the north-west' do
       subject.cell_grid[cell.y - 1][cell.x - 1].alive = true
       subject.live_neighbours_around_cell(cell).count.should == 1
+    end
+    it 'Should randomly populate the world' do
+      subject.live_cells.count.should == 0
+      subject.randomly_populate
+      subject.live_cells.count.should_not == 0
     end
   end
 
