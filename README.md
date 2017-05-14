@@ -1,5 +1,7 @@
 # simulate
 
+<img src="gol_gosu.png" align="center">
+
 
 ### Conway's Game of Life
 
@@ -20,4 +22,4 @@ The initial pattern constitutes the seed of the system. The first generation is 
 3. Run Test: rspec spec/game_of_life.rb
 4. ruby gosu_game_of_life.rb
 
-'goso' gem is used for visualization. Rspec is used for tdd. 
+'goso' gem is used for visualization. Rspec is used for tdd.
