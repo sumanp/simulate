@@ -24,10 +24,14 @@ class GameOfLifeWindow < Gosu::Window
     @world = World.new(@cols, @rows)
     @game = Game.new(@world)
     @game.world.randomly_populate
+    @generation = 0
+
   end
 
   def update
     @game.tick!
+    @generation += 1
+    puts "Generation No: #{@generation}"
   end
 
   def draw

@@ -11,6 +11,13 @@ The Game of Life, also known simply as Life, is a cellular automaton devised by 
 4. Any dead cell with exactly three live neighbours becomes a live cell.
 
 
-### Write a program which does this
-
 The initial pattern constitutes the seed of the system. The first generation is created by applying the above rules simultaneously to every cell in the seed; births and deaths happen simultaneously, and the discrete moment at which this happens is sometimes called a tick (in other words, each generation is a pure function of the one before). The rules continue to be applied repeatedly to create further generations.
+
+
+### How to Run the Program?
+1. Clone the Repo: git clone https://github.com/sumanp/simulate
+2. CD simulate
+3. Run Test: rspec spec/game_of_life.rb
+4. ruby gosu_game_of_life.rb
+
+'goso' gem is used for visualization. Rspec is used for tdd. 
